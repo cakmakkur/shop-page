@@ -1,0 +1,95 @@
+.bufferBanner {
+  min-height: 20vh;
+}
+
+h3 {
+  font-style: italic;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 10vh;
+  text-shadow: 0px 0px 5px rgb(173, 164, 164);
+}
+
+.pageInbetween {
+  display: block;
+  width: 100%;
+  height: 15vh;
+  background: transparent;
+}
+
+.subpage {
+  display: block;
+  position: sticky;
+  top: 14vh;
+  width: 100%;
+  height: 86vh;
+}
+
+.subpageBlank {
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 14vh;
+  width: 100%;
+  height: 86vh;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding-left: 4rem;
+
+}
+
+.subBlank2 {
+  background: transparent;
+}
+
+.comment {
+  width: 340px;
+  background-color: rgb(195, 195, 195);
+  border: 1px solid rgb(0, 1, 28);
+  border-radius: 15px;
+  box-shadow: inset 1px 1px 15px rgb(4, 0, 20);
+}
+
+.descTitel {
+  font-size: 28px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-top: 10px;
+  color: rgb(98, 98, 98);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.text {
+  padding-right: 70px;
+  padding-left: 25px;
+  padding-bottom: 20px;
+}
+
+
+
+
+.descPic {
+  width: 650px;
+  margin-right: 40px;
+  box-shadow: 0 0 15px 10px black;
+}
+
+
+.subpage1 {background-color: aqua;}
+.subpage2 {background-color: rgb(255, 191, 0);}
+.subpage3 {background-color: rgb(77, 1, 144);}
+.subpage4 {background-color: rgb(238, 255, 0);}
+.subpage5 {background-color: rgb(184, 0, 58);}
+.subpage6 {background-color: rgb(36, 148, 11);}
+
+.starryUpper {
+  position: absolute;
+}
+
+.pagePic1 {
+  height: 86vh;
+  width: 100%;
+}

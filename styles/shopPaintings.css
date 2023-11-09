@@ -1,0 +1,28 @@
+
+.navShop:hover, .navMenu:hover, .headerMenuContent {
+  background-color:rgb(224, 223, 158);
+}
+
+.homeButton:hover, .headerMenuContent a {
+  color:rgb(214, 124, 82);
+
+}
+
+.headerMenuContent a:hover, .subContent {
+  background-color: rgb(204, 203, 138);
+}
+
+.headerMenuContent a:active {
+  background-color: rgb(224, 223, 158);
+}
+
+.subContent a {
+  color:rgb(191, 104, 63);
+}
+
+
+.mainArea {
+  width: 100%;
+  height: 87vh;
+  position: relative;
+}

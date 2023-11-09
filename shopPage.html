@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Page</title>
+    <link rel="stylesheet" href="shopPage.css" />
+    <script
+      src="https://kit.fontawesome.com/97f4ba8ed0.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Roboto Mono", monospace;
+      }
+      body {
+        min-height: 100vh;
+        min-width: 170px;
+        position: relative;
+      }
+    </style>
+
+  </head>
+  
+  <body>
+    <!--SIDEBAR-->
+    <div class="sidebar" id="js-sidemenuContainer">
+      <a id="options" href="">Buy this</a>
+      <a id="options" href="">Buy that</a>
+      <a id="options" href="">Buy again</a>
+      <a id="options" href="">Buy more</a>
+      <a id="options" href="">Buy forever</a>
+    </div>
+    <!--TOGGLE BUTTON-->
+    <button
+      class="menuToggleButton"
+      id="sidemenuToggle"
+      onclick="toggleSidemenu()"
+    >
+      <i class="fa-solid fa-angle-right fa-2xl"></i>
+    </button>
+    <div class="shopArea" id="main">
+      <!--HEADER-->
+      <header>
+        <!-- TOP BAR -->
+        <div class="toLeft">
+          <div class="navSymbol">
+            <a href="#" class="nav_logo">
+              <img class="logoPic" src="ma.0004.png" alt="" />
+            </a>
+          </div>
+        </div>
+        
+        <!-- RIGHT SIDE OF THE MENUBAR -->
+        <div class="toRight">
+  
+          <div class="navHome">
+            <i class="fa-solid fa-house houseIcon" style="color: #404247">
+            </i> <a href="http://127.0.0.1:5500/JAVA/Moonatelier/index.html" class="homeStyle homeButton">Home</a>
+          </div>
+  
+          <div class="navShop" id="navShop">
+            <button onclick="toggleDropdown('shopDropContent')" class="shopButton">
+              <i class="fa-solid fa-basket-shopping"  style="color: #404247" id="shopDropContenticon"></i>
+              </i>
+              Shop <i class="fa-solid fa-chevron-down" style="color: #404247" id="shopDropContentchevron"></i>
+            </button>
+            <div class="shopContent headerMenuContent" id="shopDropContent">
+              <a href="http://127.0.0.1:5500/JAVA/Moonatelier/shopPaintings.html">Paintings</a>
+              <a href="javascript:void();">Compositions</a>
+              <a href="javascript:void();">Visuals</a>
+              <a href="javascript:void();">Sculptures</a>
+            </div>
+          </div>
+  
+          <div class="navMenu" id="navMenu">
+            <button onclick="toggleDropdown('dropdownContent')" class="menuButton">
+              <i class="fa-solid fa-bars" style="color: #404247" id="dropdownContenticon"></i>
+              Menu <i class="fa-solid fa-chevron-down" id="dropdownContentchevron" style="color: #404247"></i>
+            </button> 
+            <div class="menuContent headerMenuContent" id="dropdownContent">
+              <a href="http://127.0.0.1:5500/Exercises/buttonToggle.html" target="_blank">About us</a>
+              <a class="subContentButton sabrinaButton" onclick="toggleSubContent('sub-sab-dropdownContent')" href="javascript:void();">Sitemap <i class="fa-solid fa-chevron-down" id="sub-sab-dropdownContentchevron" style="color: #404247"></i></a>
+                <ul class="sabrinaSubContent subContent" id="sub-sab-dropdownContent">
+                  <a href="javascript:void();">Utopia</a>
+                  <a href="javascript:void();">Subbee</a>
+                </ul>
+              <a class="subContentButton collectiveButton" onclick="toggleSubContent('sub-col-dropdownContent')" href="javascript:void();">Contact <i class="fa-solid fa-chevron-down" id="sub-col-dropdownContentchevron" style="color: #404247"></i></a>
+                <ul class="collectiveSubContent subContent" id="sub-col-dropdownContent">
+                  <a href="javascript:void();">S&A</a>
+                  <a href="javascript:void();">3+</a>
+              </ul>
+              <a href="http://127.0.0.1:5500/JAVA/Moonatelier/kontaktPage.html?name=asd&email=outl%40sd.com&message=asdasdasd">Contact us</a>
+              <a href="https://www.youtube.com" target="_blank">Impressum</a>
+            </div>
+          </div>
+  
+        </div>
+      </header>      
+      <!--SECONDARY HEADER-->
+      <div class="topShoppingHeader">
+        <!--LEFT SIDE-->
+        <div class="leftSide">
+          <label for="material">Material: </label>
+          <select name="material" id="js-material">
+            <option value="oil">Oil</option>
+            <option value="acryl">Acryl</option>
+          </select>
+          <label for="size">Size: </label>
+          <select name="size" id="js-size">
+            <option value="50-70">50/70</option>
+            <option value="100-80">100/80</option>
+            <option value="40-50">40/50</option>
+            <option value="40-60">40/60</option>
+          </select>
+        </div>
+        <!--RIGHT SIDE-->
+        <div class="rightSide">
+          <a href=""><i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
+          <a href=""><i class="fa-solid fa-money-bill fa-2xl"></i></a>
+        </div>
+      </div>
+      <!--LISTING AREA-->
+      <div class="productArea">
+        <div class="productGridContainer">
+          <div class="productContainer product1">
+            <div class="productImage">
+              <img src="paintings /IMG-20230203-WA0009.jpg" alt="" />
+            </div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product2">
+            <div class="productImage">
+              <img
+                src="paintings /WhatsApp Image 2023-09-11 at 09.53.26.png"
+                alt=""
+              />
+            </div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+                <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product3">
+            <div class="productImage">
+              <img
+                src="paintings /WhatsApp Image 2023-09-11 at 09.53.25.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product4">
+            <div class="productImage">
+              <img
+                src="paintings /WhatsApp Image 2023-09-11 at 09.53.25 (1).jpeg"
+                alt=""
+              />
+            </div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product5">
+            <div class="productImage">
+              <img
+                src="paintings /WhatsApp Image 2023-09-11 at 09.08.53.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product6">
+            <div class="productImage">IMG</div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product7">
+            <div class="productImage">IMG</div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product8">
+            <div class="productImage">IMG</div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product9">
+            <div class="productImage">IMG</div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product10">
+            <div class="productImage">IMG</div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product11">
+            <div class="productImage">IMG</div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product12">
+            <div class="productImage">IMG</div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product13">
+            <div class="productImage">IMG</div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product14">
+            <div class="productImage">IMG</div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product15">
+            <div class="productImage">IMG</div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product16">
+            <div class="productImage">IMG</div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product17">
+            <div class="productImage"></div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product18">
+            <div class="productImage">
+              <img
+                src="paintings/WhatsApp Image 2023-09-11 at 09.08.53.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product19">
+            <div class="productImage">
+              <img
+                src="paintings /WhatsApp Image 2023-09-11 at 09.53.25 (1).jpeg"
+                alt=""
+              />
+            </div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+          <div class="productContainer product20">
+            <div class="productImage">IMG</div>
+            <div class="productInfo">
+              blabla blabl <br />oil on canvas <br />70x80
+              <img class="fa-cart-shopping" src="cart-shopping-solid.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--SCRIPT-->
+    <script>
+      let buttonStatus = document.getElementById("sidemenuToggle");
+
+      function toggleSidemenu() {
+        if (!buttonStatus.classList.contains("clickedToggleButton")) {
+          document.getElementById("js-sidemenuContainer").style.width = "50%";
+          document.getElementById("main").style.marginLeft = "50%";
+          document.getElementById("main").style.filter = "blur(3px)";
+        } else if (buttonStatus.classList.contains("clickedToggleButton")) {
+          document.getElementById("js-sidemenuContainer").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+          document.getElementById("main").style.filter = "blur(0px)";
+        }
+        document
+          .getElementById("sidemenuToggle")
+          .classList.toggle("clickedToggleButton");
+      }
+      const subSabbi = document.getElementById("sub-sab-dropdownContent");
+    const subCol = document.getElementById("sub-col-dropdownContent");
+    const removeElem3 = document.getElementById('sub-sab-dropdownContentchevron');
+    const removeElem4 = document.getElementById('sub-col-dropdownContentchevron');
+
+function clearSubs() {
+  if (subSabbi.classList.contains('show')) {
+    subSabbi.classList.remove('show');
+    removeElem3.classList.remove('rotate')
+  }
+    if (subCol.classList.contains('show')) {
+    subCol.classList.remove('show');
+    removeElem4.classList.remove('rotate')
+  }    
+}
+
+function removeChanges(toChange, toChange2) {
+  toChange.classList.remove('rotate');
+  toChange2.classList.remove('iconAnimation');
+}
+
+function toggleDropdown(param) {
+  document.getElementById(param).classList.toggle("show");
+  document.getElementById(param + 'chevron').classList.toggle("rotate");
+  document.getElementById(param + 'icon').classList.toggle("iconAnimation");
+}  
+function toggleSubContent(param) {
+  document.getElementById(param).classList.toggle("show");
+  document.getElementById(param + 'chevron').classList.toggle("rotate");
+}
+
+window.addEventListener("click", function(e) {
+  if (!e.target.matches('.shopButton') && !e.target.matches('.subContentButton')) {
+    const shopDropContent = document.getElementById("shopDropContent");
+    const removeElem = document.getElementById('shopDropContentchevron');
+    const removeElem2 = document.getElementById('shopDropContenticon');
+
+    if (shopDropContent.classList.contains('show')) {
+      shopDropContent.classList.remove('show');
+      removeChanges(removeElem, removeElem2);
+    };
+    clearSubs();
+  };
+  if (!e.target.matches('.menuButton') && !e.target.matches('.subContentButton')) {
+    const dropdownContent = document.getElementById("dropdownContent");
+    const removeElem = document.getElementById('dropdownContentchevron');
+    const removeElem2 = document.getElementById('dropdownContenticon');
+
+    if (dropdownContent.classList.contains('show')) {
+      dropdownContent.classList.remove('show');
+      removeChanges(removeElem, removeElem2);    
+    };    
+    clearSubs();
+  };
+});
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,389 @@
+/*MENUBAR*/
+.navShop:hover, .navMenu:hover, .headerMenuContent {
+  background-color:rgb(224, 223, 158);
+}
+
+.homeButton:hover, .headerMenuContent a {
+  color:rgb(214, 124, 82);
+
+}
+
+.headerMenuContent a:hover, .subContent {
+  background-color: rgb(204, 203, 138);
+}
+
+.headerMenuContent a:active {
+  background-color: rgb(224, 223, 158);
+}
+
+.subContent a {
+  color:rgb(191, 104, 63);
+}
+
+
+.logoPic {
+  height: 80px;  
+  object-fit: cover;
+  border-radius: 100px;
+  border: 1px solid rgb(164, 164, 164);
+  box-shadow: 0px 0px 10px darkgray;
+  }
+
+header {
+position: relative;
+top: 0;  
+display: flex;
+flex-direction: row;
+width: 100%;
+height: 15vh;
+border: 1px solid rgb(6, 18, 10);
+z-index: 120;
+border-bottom: 3px solid rgb(52, 51, 51);
+background: rgb(41,70,76);
+background: linear-gradient(108deg, rgba(41,70,76,1) 0%, rgba(213,245,252,1) 43%, rgba(209,223,224,1) 100%);}
+
+.toLeft {
+flex: 1;
+position: relative;
+top: 4%;
+margin-left: 40px;
+min-width: 100px;
+display: flex;
+margin-right: 40px;
+}
+.logoPic {
+  height: 80px;  
+  object-fit: contain;
+  border-radius: 40px;
+  }
+
+
+.toRight {
+position: absolute;
+flex: 1;
+display: flex;
+flex-direction: row;
+top: 40%;
+right: 3%;
+justify-content: space-between;
+text-wrap: nowrap;
+flex-shrink: 0;
+min-width: 305px;
+}
+
+.toRight div {
+padding: 5px;
+border-radius: 10px;
+transition: background-color 0.2s;
+transition: box-shadow 0.2s;
+
+}
+
+/* divs */
+.navHome, .navShop, .navMenu {
+height: 30px;
+}
+
+.homeButton:hover {
+cursor: pointer;
+border: none;
+}
+
+.navShop:hover, .navMenu:hover {
+cursor: pointer;
+border: none;
+box-shadow: 0 0 10px rgba(57, 79, 79, 0.25);
+}
+
+/* buttons */
+.menuButton, .shopButton, .homeStyle {
+color: rgb(18, 20, 24);
+
+border: none;
+background: none;
+font-size: 18px;
+text-decoration: none;
+}
+.menuButton:hover, .shopButton:hover, .p:hover {
+cursor: pointer;
+}
+
+.fa-solid {
+pointer-events: none;
+transition: ease-in-out 0.2s;
+}
+
+.headerMenuContent {  
+position: fixed;
+display: none;
+top: 90px;
+min-width: 130px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 10;
+transition: 1s;
+opacity: 0;
+}
+
+.menuContent {
+right: 0px;
+}
+
+/* manipulations upon clicking */
+
+.rotate {
+transform: rotate(180deg);
+}
+.iconAnimation {  
+opacity: 0.5;
+animation-name: iconAnimation;
+animation-duration: 0.8s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+@keyframes iconAnimation {
+from {opacity: 1}
+to {opcaity: 0.5}
+}
+
+.headerMenuContent a {
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+border-radius: 8px;
+}
+
+/* submenu items*/
+
+.subContent {
+display: none;
+min-width: 110px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+border-radius: 5px;
+z-index: 90;
+border-top: 1px solid black;
+}
+
+.subContent a {
+float: none;
+padding: 4px 15px;
+font-size: 14px;
+text-decoration: none;
+display: block;
+text-align: left;
+border-radius: 8px;
+}
+
+.show {
+display: block;
+opacity: 1;
+animation-name: menuAnimation;
+animation-duration: 0.25s;
+animation-iteration-count: 1;
+animation-direction: normal;
+}
+@keyframes menuAnimation {
+from {opacity: 0}
+to {opacity: 1}
+}
+
+/*MENU TOGGLE*/
+
+
+
+.menuToggleButton {
+  background :  rgba(240, 226, 208, 0.049);
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 19px;
+  height: 30px;
+  left: 5px;
+  top: 15vh;
+  z-index: 110;
+  position: fixed;
+  transition: 0.4s;
+}
+.menuToggleButton:hover {
+  background :  rgba(74, 71, 68, 0.337);
+  cursor: pointer;
+}
+.fa-angle-right {
+  color: rgb(240, 226, 208);
+}
+
+.clickedToggleButton {
+  background:  rgb(193, 168, 137);
+  left: 50%;
+  display: fixed;
+  transform: rotate(180deg);
+}
+
+.sidebar {
+  background-color: rgb(40, 33, 33);
+  position: fixed;
+  height: 100vh;
+  width: 0px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 0.4s;
+}
+
+
+.sidebar a {
+  display: block;
+  font-size: 1.5rem;
+  padding-bottom: 5vh;
+  padding-left: 5%;
+  white-space: nowrap;
+  color: darkgray;
+  left: -50vw;
+}
+
+
+.sidebar > :first-child {
+  padding-top: 10vh;
+  left: -50%;
+}
+
+/*SHOP AREA*/
+
+.shopArea {
+  position: relative;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(213,245,252,1) 8%, rgba(66,81,82,1) 100%);
+  color: black;
+  transition:  0.4s;
+  z-index: 90;
+}
+
+.topShoppingHeader {
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 40px;
+  background-color: rgb(222, 208, 208);
+  top: 0vh;
+  z-index: 100;
+}
+
+.leftSide {
+  flex: 3;
+  padding-left: 2%;
+  padding-top: 1vh;
+}
+
+.leftSide label {
+  color: black;
+}
+
+
+.rightSide {
+  padding-right: 2%;
+  text-align: end;
+  flex: 2;
+  padding-top: 8px;
+}
+
+
+.productArea {
+  position: relative;
+  top: 10vh;
+  width: 100%;
+  z-index: 90px;
+}
+
+.productGridContainer {
+  display: grid;
+  padding: 13vh 5vh 1vh 5vh;
+  column-gap: 5%;
+  width: 100%;  
+}
+
+.productContainer {
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  min-width: 150px;
+  margin-bottom: 15vh;
+  aspect-ratio: 4 / 5;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px 15px rgba(0, 0, 0, 0.387);
+  transition: 0.2s;
+  border: 2px solid rgba(58, 55, 55, 0.562);
+}
+
+.productContainer:hover {
+  position: relative;
+  cursor: pointer;
+  transform: scale(1.1);
+
+}
+.productImage {
+  display: flex;
+  align-items: stretch;  
+}
+img {
+ width: 100%;
+}
+.productInfo {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  background-color: rgb(227, 222, 207);
+  padding: 5px;
+  box-shadow: inset 0px 0px 5px rgb(94, 81, 56);
+}
+
+.fa-cart-shopping {
+  color: rgb(146, 19, 19);
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  border-radius: 0px 10px 10px 10px;
+}
+
+
+
+
+@media (max-width: 368px) {
+  .productGridContainer {
+    grid-template-columns: repeat(1, 1fr );
+  }
+  .topShoppingHeader {
+    display: none;
+  }
+}
+
+@media (min-width: 369px) and (max-width: 600px) {
+  .productGridContainer {
+    grid-template-columns: repeat(2, 1fr );
+  }
+  .topShoppingHeader {
+    display: none;
+  }
+
+}
+
+@media (min-width: 601px) and (max-width: 950px) {
+  .productGridContainer {
+    grid-template-columns: repeat(3, 1fr );
+  }
+  .menuToggleButton {
+    display: none;
+  }
+}
+
+@media (min-width: 951px){
+  .productGridContainer {
+    grid-template-columns: repeat(4, 1fr );
+  }
+  .menuToggleButton {
+    display: none;
+  }
+}
+
+
+
+

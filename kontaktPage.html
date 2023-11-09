@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+    <link rel="icon" type="image/x-icon" href="Assets/icon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/kontaktPage.css">
+    <link rel="stylesheet" href="styles/commonLayout.css">
+    <style>
+
+
+header {
+  background: rgb(255,253,148);
+  background: linear-gradient(220deg, rgba(255,253,148,1) 0%, rgb(248, 248, 164) 29%, rgb(196, 195, 149) 84%, rgb(255, 255, 255) 100%);
+  z-index: 100;
+}
+.backBox {
+  background-image: url(Assets/painting33.jpg);  
+  background-size: 100% 87vh;
+  width: 100%;
+  height: 87vh;
+  opacity: 1;
+  filter: blur(3px);
+  box-shadow: inset 0px 0px 20px 2px rgb(255, 255, 123);
+  position: fixed;
+}
+
+    </style>
+    <script
+      src="https://kit.fontawesome.com/97f4ba8ed0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <!-- TOP BAR -->
+      <div class="toLeft">
+        <div class="navSymbol">
+          <a href="#" class="nav_logo">
+            <img class="logoPic" src="Assets/ma.0004.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <!--MIDDLE SIDE-->
+      <div class="toMiddle"></div>
+      <!-- RIGHT SIDE OF THE MENUBAR -->
+      <div class="toRight" id="js-sidemenuContainer">
+
+        <div class="navHome">
+          <i class="fa-solid fa-house houseIcon" style="color: #404247">
+          </i> <a href="http://127.0.0.1:5500/JAVA/Moonatelier/index.html" class="homeStyle homeButton">Home</a>
+        </div>
+
+        <div class="navShop" id="navShop">
+          <button onclick="toggleDropdown('shopDropContent')" class="shopButton">
+            <i class="fa-solid fa-basket-shopping"  style="color: #404247" id="shopDropContenticon"></i>
+            </i> Shop <i class="fa-solid fa-chevron-down" style="color: #404247" id="shopDropContentchevron"></i>
+          </button>
+          <div class="shopContent headerMenuContent" id="shopDropContent">
+            <a href="javascript:void();">Paintings</a>
+            <a href="javascript:void();">Compositions</a>
+            <a href="javascript:void();">Visuals</a>
+            <a href="javascript:void();">Sculptures</a>
+          </div>
+        </div>
+
+        <div class="navMenu" id="navMenu">
+          <button onclick="toggleDropdown('dropdownContent')" class="menuButton">
+            <i class="fa-solid fa-bars" style="color: #404247" id="dropdownContenticon"></i> Menu <i class="fa-solid fa-chevron-down" id="dropdownContentchevron" style="color: #404247"></i>
+          </button> 
+          <div class="menuContent headerMenuContent" id="dropdownContent">
+            <a href="http://127.0.0.1:5500/Exercises/buttonToggle.html" target="_blank">About us</a>
+            <a class="subContentButton sabrinaButton" onclick="toggleSubContent('sub-sab-dropdownContent')" href="javascript:void();">Sitemap <i class="fa-solid fa-chevron-down" id="sub-sab-dropdownContentchevron" style="color: #404247"></i></a>
+              <ul class="sabrinaSubContent subContent" id="sub-sab-dropdownContent">
+                <a href="javascript:void();">Utopia</a>
+                <a href="javascript:void();">Subbee</a>
+              </ul>
+            <a class="subContentButton collectiveButton" onclick="toggleSubContent('sub-col-dropdownContent')" href="javascript:void();">Contact <i class="fa-solid fa-chevron-down" id="sub-col-dropdownContentchevron" style="color: #404247"></i></a>
+              <ul class="collectiveSubContent subContent" id="sub-col-dropdownContent">
+                <a href="javascript:void();">S&A</a>
+                <a href="javascript:void();">3+</a>
+            </ul>
+            <a href="http://127.0.0.1:5500/JAVA/Moonatelier/kontaktPage.html?name=asd&email=outl%40sd.com&message=asdasdasd">Contact us</a>
+            <a href="https://www.youtube.com" target="_blank">Impressum</a>
+          </div>
+        </div>
+
+      </div>
+    </header>
+    <button class="menuToggleButton" id="sidemenuToggle" onclick="toggleSidemenu()"><i class="fa-solid fa-angle-right fa-2xl" ></i></button>
+
+    <div class="sidemenuContainer" id="js-sidemenuContainer">
+    <div class="backBox">
+      </div>
+    <div class="mainArea">
+
+    
+    <div class="flexBox">
+      <div class="leftSide">
+        <div class="contactUs">Contact us</div>
+        <div class="leftBottom">
+          <div class="info">
+            <p>Mondatelier A.G <br><br>mondatelier@potmail.com <br>0681 1234590 <br><br>Mondgasse 5, <br>1190, WIEN
+          </div>
+          <div class="socialLogos">
+            <a href="https://www.facebook.com" target="_blank"><img class="logo1" src="Assets/Facebook-f_Logo-Blue-Logo.wine.svg" alt=""></a>
+           <a href="https://www.instagram.com" target="_blank"> <img class="logo2" src="Assets/Instagram-Logo.wine.svg" alt="">
+           </div></a>
+           
+          
+            
+        </p>
+        </div>       
+      </div>
+      <div class="rightSide">
+        <form class="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="7" maxlength="2000" required></textarea>
+
+          <button type="submit">Submit</button>
+      </form>
+      </div>
+    </div>
+   
+<script>
+  function toggleSidemenu() {
+  document.getElementById("sidemenuToggle").classList.toggle("clickedToggleButton");
+  document.getElementById("js-sidemenuContainer").classList.toggle("sidemenuActive");
+}
+</script>
+
+    <script src="scripts/js-header.js"></script>
+    <script src="scripts/js-general.js"></script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+.menuToggleButton {
+  background :  rgba(240, 226, 208, 0.049);
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 19px;
+  height: 30px;
+  left: 5px;
+  top: 100px;
+  z-index: 100;
+  position: fixed;
+  transition: 0.2s;
+  /*change this in the final to fixed*/
+  display: fixed;
+}
+.menuToggleButton:hover {
+  background :  rgba(74, 71, 68, 0.337);
+  cursor: pointer;
+}
+.fa-angle-right {
+  color: rgb(240, 226, 208);
+}
+
+.sidemenuContainer {
+  display: inline-block;
+  position: fixed;
+  width: 100px;
+  height: 60vh;
+  left: -110px;
+  top: 90px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgb(220, 227, 228);
+  z-index: 90;
+  transition: 0.2s;
+}
+.sidemenuActive {
+  left: 5px;
+}
+
+.sidemenuFlexContainer {
+  padding-left: 5px;
+  display: grid;
+  grid-template-rows: 20vh, 20vh, 20vh;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.buttonSidemenu {
+  width: 71px;
+  height: 71px;
+  border: 1px solid black;
+  border-radius: 50px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: rgb(241, 248, 255);
+  box-shadow: 1px 1px 10px black;
+}
+.buttonDivs p {
+  text-align: center;
+}
+.clickedToggleButton {
+    background:  rgb(193, 168, 137);
+    left: 110px;
+    display: fixed;
+    transform: rotate(180deg);
+}
+
+.buttonSidemenu:hover {
+  background-color: rgb(221, 228, 235);
+}
+
+.buttonSidemenu:active {
+  box-shadow: inset 1px 1px 6px black;
+}
+
+.buttonK,
+.buttonS,
+.buttonP {
+  width: 55px;
+  height: 55px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 8px;
+  left: 7px;
+  transition: 0.1s;
+}
+
+.buttonK:hover,
+.buttonS:hover,
+.buttonP:hover,
+.buttonK:active,
+.buttonS:active,
+.buttonP:active {
+  color: orange;
+}

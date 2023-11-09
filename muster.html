@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moonantelier</title>
+    <link rel="icon" type="image/x-icon" href="Assets/icon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/muster.css">
+    
+    <style>
+  * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;}
+body {
+  min-height: 100vh;
+  background: rgb(125,149,148);
+  background: linear-gradient(148deg, rgb(167, 198, 197) 0%, rgb(218, 228, 229) 100%);
+}
+header {
+  background: rgb(255,253,148);
+  background: linear-gradient(220deg, rgba(255,253,148,1) 0%, rgba(108,131,136,1) 29%, rgba(213,245,252,1) 84%, rgba(167,167,167,1) 100%);
+}
+.logoPic {
+    height: 80px;  
+    object-fit: cover;
+    border-radius: 100px;
+    border: 1px solid rgb(164, 164, 164);
+    box-shadow: 0px 0px 10px darkgray;
+    }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/97f4ba8ed0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <!-- TOP BAR -->
+      <div class="toLeft">
+        <div class="navSymbol">
+          <a href="#" class="nav_logo">
+            <img class="logoPic" src="Assets/ma.0004.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <!--Stars in the upper bar-->
+      <div class="toMiddle">
+       
+        <i
+          class="fa-solid fa-star fa-fade star1 fa-2xs"
+          style="color: #f7f6d9"
+        ></i>
+        <i
+          class="fa-solid fa-star fa-fade star2 fa-2xs"
+          style="color: #f7f6d9"
+        ></i>
+        <i
+          class="fa-solid fa-star fa-fade star3 fa-2xs"
+          style="color: #f7f6d9"
+        ></i>
+        <i
+          class="fa-solid fa-star fa-fade star4 fa-2xs"
+          style="color: #f7f6d9"
+        ></i>
+        <i
+          class="fa-solid fa-star fa-fade star5 fa-2xs"
+          style="color: #f7f6d9"
+        ></i>
+        <i
+          class="fa-solid fa-star fa-fade star6 fa-2xs"
+          style="color: #f7f6d9"
+        ></i>
+      </div>
+      <!-- RIGHT SIDE OF THE MENUBAR -->
+      <div class="toRight">
+
+        <div class="navHome">
+          <i class="fa-solid fa-house houseIcon" style="color: #404247">
+          </i> <a href="http://127.0.0.1:5500/JAVA/Moonatelier/index.html" class="homeStyle homeButton">Home</a>
+        </div>
+
+        <div class="navShop" id="navShop">
+          <button onclick="toggleDropdown('shopDropContent')" class="shopButton">
+            <i class="fa-solid fa-basket-shopping"  style="color: #404247" id="shopDropContenticon"></i>
+            </i>
+            Shop  <i class="fa-solid fa-chevron-down" style="color: #404247" id="shopDropContentchevron"></i>
+          </button>
+          <div class="shopContent headerMenuContent" id="shopDropContent">
+            <a href="javascript:void();">Paintings</a>
+            <a href="javascript:void();">Compositions</a>
+            <a href="javascript:void();">Visuals</a>
+            <a href="javascript:void();">Sculptures</a>
+          </div>
+        </div>
+
+        <div class="navMenu" id="navMenu">
+          <button onclick="toggleDropdown('dropdownContent')" class="menuButton">
+            <i class="fa-solid fa-bars" style="color: #404247" id="dropdownContenticon"></i>
+            Menu <i class="fa-solid fa-chevron-down" id="dropdownContentchevron" style="color: #404247"></i>
+          </button> 
+          <div class="menuContent headerMenuContent" id="dropdownContent">
+            <a href="http://127.0.0.1:5500/Exercises/buttonToggle.html" target="_blank">About us</a>
+            <a class="subContentButton sabrinaButton" onclick="toggleSubContent('sub-sab-dropdownContent')" href="javascript:void();">Sitemap <i class="fa-solid fa-chevron-down" id="sub-sab-dropdownContentchevron" style="color: #404247"></i></a>
+              <ul class="sabrinaSubContent subContent" id="sub-sab-dropdownContent">
+                <a href="javascript:void();">Utopia</a>
+                <a href="javascript:void();">Subbee</a>
+              </ul>
+            <a class="subContentButton collectiveButton" onclick="toggleSubContent('sub-col-dropdownContent')" href="javascript:void();">Contact <i class="fa-solid fa-chevron-down" id="sub-col-dropdownContentchevron" style="color: #404247"></i></a>
+              <ul class="collectiveSubContent subContent" id="sub-col-dropdownContent">
+                <a href="javascript:void();">S&A</a>
+                <a href="javascript:void();">3+</a>
+            </ul>
+            <a href="https://www.youtube.com" target="_blank">Impressum</a>
+          </div>
+        </div>
+
+      </div>
+    </header>
+    <div class="topNav">
+      <div class="leftSide">1</div>
+      <div class="middleSide">
+        <input class="searchBar" type="text" placeholder="Search...">
+        <button class="searchButton">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div class="rightSide">3</div>
+    </div>
+    
+
+
+
+
+
+
+    <script src="scripts/myAccordeon.js"></script>
+    <script src="scripts/js-sideMenu.js"></script>
+    <script src="scripts/js-header.js"></script>
+    <script src="scripts/js-general.js"></script>
+  </body>
+</html>
